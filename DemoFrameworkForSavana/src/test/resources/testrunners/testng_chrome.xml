@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Demo Test" verbose="4" thread-count="3"
+	parallel="tests">
+
+	<listeners>
+		<listener
+			class-name="com.qa.demo.listeners.AnnotationTransformer" />
+		<listener
+			class-name="com.qa.demo.listeners.ExtentReportListener" />
+		<listener
+			class-name="com.qa.demo.listeners.TestAllureListener" />
+	</listeners>
+
+	<test name="Sample Test for Demo Purpose">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.demo.tests.HomePageTest" />
+		</classes>
+	</test>
+
+</suite>
